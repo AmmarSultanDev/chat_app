@@ -37,7 +37,7 @@ class _AuthScreenState extends State<AuthScreen> {
         print(userCredentials.toString());
       } on FirebaseAuthException catch (e) {
         print(e.code);
-        if (e.code == 'auth/email-already-in-use') {}
+        if (e.code == 'email-already-in-use') {}
 
         ScaffoldMessenger.of(context).clearSnackBars();
         ScaffoldMessenger.of(context).showSnackBar(
